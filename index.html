@@ -4,27 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tefl on the Go</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
-        header { background: #0073e6; color: white; padding: 20px; }
-        .btn { background: #ffcc00; padding: 10px 20px; text-decoration: none; color: black; border-radius: 5px; display: inline-block; margin-top: 20px; }
-        section { padding: 20px; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Tefl on the Go</h1>
         <p>Book a session & start your TEFL journey!</p>
-        <a href="https://calendly.com/kaylumsingh26/30min" class="btn">Book a Meeting</a>
+        <a href="#booking" class="btn">Book a Meeting</a>
     </header>
 
-    <section>
+    <section id="about">
         <h2>About the Course</h2>
         <p>We offer TEFL exam preparation, CV help, and job assistance.</p>
     </section>
 
+    <section id="booking">
+        <h2>Book a Session</h2>
+        <p>Enter your details below and then click "Book Now" to schedule a meeting.</p>
+        
+        <!-- User Input Fields -->
+        <form id="user-form">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="text" id="surname" name="surname" placeholder="Your Surname" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <button type="button" id="book-btn">Book Now</button>
+        </form>
+    </section>
+
     <footer>
-        <p>&copy; 2025 Tefl on the Go</p>
+        <p>&copy; 2024 Tefl on the Go</p>
     </footer>
+
+    <script>
+        document.getElementById("book-btn").addEventListener("click", function() {
+            var name = document.getElementById("name").value;
+            var surname = document.getElementById("surname").value;
+            var email = document.getElementById("email").value;
+
+            if (name && surname && email) {
+                alert("Thank you, " + name + "! Your details have been recorded.");
+                // You can modify this to send the data to a server or email
+            } else {
+                alert("Please fill in all fields before booking.");
+            }
+        });
+    </script>
 </body>
 </html>
