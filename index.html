@@ -10,7 +10,7 @@
     <header>
         <h1>Tefl on the Go</h1>
         <p>Book a session & start your TEFL journey!</p>
-        <a href="#booking" class="btn">Book a Meeting</a>
+        <a href="https://calendly.com/your-link" class="btn">Book a Meeting</a>
     </header>
 
     <section id="about">
@@ -20,34 +20,9 @@
 
     <section id="booking">
         <h2>Book a Session</h2>
-        <p>Enter your details below and then click "Book Now" to schedule a meeting.</p>
-        
-        <!-- User Input Fields -->
-        <form id="user-form">
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-            <input type="text" id="surname" name="surname" placeholder="Your Surname" required>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-            <button type="button" id="book-btn">Book Now</button>
-        </form>
+        <p>Click the button below to schedule a meeting.</p>
+        <a href="https://calendly.com/your-link" target="_blank" class="btn">Book Now</a>
     </section>
 
     <footer>
-        <p>&copy; 2024 Tefl on the Go</p>
-    </footer>
-
-    <script>
-        document.getElementById("book-btn").addEventListener("click", function() {
-            var name = document.getElementById("name").value;
-            var surname = document.getElementById("surname").value;
-            var email = document.getElementById("email").value;
-
-            if (name && surname && email) {
-                alert("Thank you, " + name + "! Your details have been recorded.");
-                // You can modify this to send the data to a server or email
-            } else {
-                alert("Please fill in all fields before booking.");
-            }
-        });
-    </script>
-</body>
-</html>
+       
